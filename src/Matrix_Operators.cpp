@@ -2,10 +2,9 @@
  * @Author: Reina__
  * @Date: 2024-04-18 13:43:45
  * @Last Modified by: Reina__
- * @Last Modified time: 2024-04-18 21:12:36
+ * @Last Modified time: 2024-04-18 21:17:53
  */
 #include "Matrix.h"
-#include "Color.h"
 Matrix::Matrix()
 {
     rows = cols = 0;
@@ -68,6 +67,7 @@ Matrix Matrix::operator*(const Frac &scalar) const
             result.Set_Element(row, col, data[row][col] * scalar);
     return result;
 }
+//定义了一个连接运算符
 Matrix Matrix::operator|(const Matrix &other) const
 {
     if (other.rows != rows)
@@ -81,6 +81,7 @@ Matrix Matrix::operator|(const Matrix &other) const
         result.data[row].insert(result.data[row].end(), other.data[row].cbegin(), other.data[row].cend());
     return result;
 }
+//定义了一个次方运算符
 Matrix Matrix::operator^(const int &pow) const
 {
     Matrix result(0, 0), base = *this;

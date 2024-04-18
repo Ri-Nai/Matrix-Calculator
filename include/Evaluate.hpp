@@ -2,10 +2,12 @@
  * @Author: Reina__
  * @Date: 2024-04-18 13:43:36
  * @Last Modified by: Reina__
- * @Last Modified time: 2024-04-18 21:13:41
+ * @Last Modified time: 2024-04-18 21:53:19
  */
 #include <stack>
 #include <cctype>
+#include <string>
+#include <iostream>
 #include "Matrix.h"
 bool is_op(char c)
 {

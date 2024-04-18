@@ -2,12 +2,9 @@
  * @Author: Reina__
  * @Date: 2024-04-18 13:43:55
  * @Last Modified by: Reina__
- * @Last Modified time: 2024-04-18 21:11:24
+ * @Last Modified time: 2024-04-18 21:54:43
  */
 #include "Frac.h"
-#include <cmath>
-#include <string>
-#include <sstream>
 Frac::Frac()
 {
     numerator = 0;

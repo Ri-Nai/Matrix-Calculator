@@ -2,10 +2,9 @@
  * @Author: Reina__
  * @Date: 2024-04-18 13:43:42
  * @Last Modified by: Reina__
- * @Last Modified time: 2024-04-18 21:11:37
+ * @Last Modified time: 2024-04-18 21:54:23
  */
 #include "Matrix.h"
-#include "Color.h"
 std::map<std::string, Matrix> Matset;
 Frac Matrix::Determinant() const
 {
@@ -39,6 +38,7 @@ Matrix Matrix::Inverse(bool process) const
         Color_out(red, "看起来你的矩阵不满秩哦");
         return Matrix();
     }
+    //利用高斯消元的方式求逆矩阵
     auto [rank, result] = (*this | Identity(cols)).Guass_Elimination(process);
     return result.Sub_Matrix(0, cols, rows, rows + cols);
 }

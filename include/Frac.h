@@ -2,13 +2,16 @@
  * @Author: Reina__
  * @Date: 2024-04-18 13:44:09
  * @Last Modified by: Reina__
- * @Last Modified time: 2024-04-18 21:13:24
+ * @Last Modified time: 2024-04-18 21:54:34
  */
 #ifndef FRAC_H
 #define FRAC_H
+#include <cmath>
 #include <string>
 #include <numeric>
+#include <sstream>
 #include <iostream>
+
 class Frac
 {
 private:

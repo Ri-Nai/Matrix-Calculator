@@ -4,10 +4,6 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/include",
-                "${workspaceFolder}/include",
-                "${workspaceFolder}/include",
-                "${workspaceFolder}/include",
                 "${workspaceFolder}/include"
             ],
             "defines": [

@@ -2,17 +2,18 @@
  * @Author: Reina__
  * @Date: 2024-04-18 13:44:05
  * @Last Modified by: Reina__
- * @Last Modified time: 2024-04-18 14:53:10
+ * @Last Modified time: 2024-04-18 21:54:21
  */
 #ifndef MATRIX_H
 #define MATRIX_H
 
 #include <map>
-#include "Frac.h"
 #include <vector>
 #include <string>
 #include <utility>
 #include <iostream>
+#include "Frac.h"
+#include "Color.h"
 
 class Matrix
 {
