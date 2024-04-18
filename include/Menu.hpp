@@ -2,25 +2,20 @@
  * @Author: Reina__
  * @Date: 2024-04-18 13:44:02
  * @Last Modified by: Reina__
- * @Last Modified time: 2024-04-18 16:32:10
+ * @Last Modified time: 2024-04-18 21:13:08
  */
 #ifndef MENU_HPP
 #define MENU_HPP
 
-#include <string>
-#include <vector>
-#include <iostream>
+#include "Color.h"
 #include <conio.h>
 #include <stdlib.h>
-#include "Color.h"
 #include <functional>
 
-// ANSI escape codes for color output
-
+//定义菜单类,函数和子标题绑定
 class Menu
 {
 private:
-    /* data */
     std::string title;
     std::vector<std::string> subtitles;
     std::vector<std::function<void()>> functions;
@@ -38,6 +33,7 @@ public:
     void Show()
     {
         system("cls");
+        // 填充菜单
         auto Format_String = [&](std::string title, int total, std::string color, bool flag)
         {
             int length = title.size();
@@ -51,14 +47,15 @@ public:
                 res = "║" + color + title + reset + left_space + right_space + "║";
             return res;
         };
-        std::cout << "╔══════════════════════════════════════════════════════════════╗" << std::endl;
-        std::cout << Format_String(title, 62, white, true) << std::endl;
-        if (!subtitles.empty())
-            std::cout << "╟──────────────────────────────────────────────────────────────╢" << std::endl;
+        // 数字编号
         auto numbered = [&](std::string s, int id)
         {
             return " " + std::string(1, char(id + '1')) + ". " + s;
         };
+        std::cout << "╔══════════════════════════════════════════════════════════════╗" << std::endl;
+        std::cout << Format_String(title, 62, white, true) << std::endl;
+        if (!subtitles.empty())
+            std::cout << "╟──────────────────────────────────────────────────────────────╢" << std::endl;
         for (int i = 0; i < subtitles.size(); ++i)
             std::cout << Format_String(numbered(subtitles[i], i), 62, cyan, false) << std::endl;
         if (!functions.empty())

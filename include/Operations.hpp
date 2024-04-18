@@ -2,7 +2,7 @@
  * @Author: Reina__
  * @Date: 2024-04-18 13:43:30
  * @Last Modified by: Reina__
- * @Last Modified time: 2024-04-18 16:38:04
+ * @Last Modified time: 2024-04-18 21:10:41
  */
 #ifndef OPERATOIONS_HPP
 #define OPERATOIONS_HPP
@@ -10,7 +10,7 @@
 #include "Matrix.h"
 #include "Color.h"
 #include "Evaluate.hpp"
-#include <iostream>
+// 输入函数,直到输入符合要求的名字
 std::string Input_name()
 {
     std::string name;
@@ -27,6 +27,7 @@ std::string Input_name()
         Color_out(red, "求求你输入一个正常的名字吧,让我做什么我都是愿意的");
     return name;
 }
+// 增添了一层是否已经被记录的判断
 std::string In_or_out()
 {
     std::string name = Input_name();
@@ -37,6 +38,7 @@ std::string In_or_out()
     }
     return name;
 }
+//提问并收取回答的函数
 bool Yes_yeah_Oh_no(std::string question)
 {
     Color_out(green, question + "(Y/n)");
@@ -49,6 +51,7 @@ bool Yes_yeah_Oh_no(std::string question)
             return false;
     }
 }
+//定义了一个输出初态和结果的函数
 template <typename res>
 void Output_name_result(std::string name, res result)
 {
@@ -57,6 +60,7 @@ void Output_name_result(std::string name, res result)
               << "The result of " << name << " is:" << std::endl
               << result << std::endl;
 }
+//定义了一个视情况存储结果的函数
 void Save_Matrix(Matrix result)
 {
     if (result.empty())
@@ -184,6 +188,7 @@ void Matrix_Operations()
     Operations.Show();
     Operations.Switch();
 }
+// 主菜单
 Menu Main("矩阵计算器",
           {"输入矩阵", "查看矩阵", "表达式求值", "矩阵的各类计算"},
           {Input_Matrix, Show_Matrix, Evaluate_Matrix, Matrix_Operations});

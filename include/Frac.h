@@ -2,12 +2,11 @@
  * @Author: Reina__
  * @Date: 2024-04-18 13:44:09
  * @Last Modified by: Reina__
- * @Last Modified time: 2024-04-18 13:45:06
+ * @Last Modified time: 2024-04-18 21:13:24
  */
 #ifndef FRAC_H
 #define FRAC_H
 #include <string>
-#include <format>
 #include <numeric>
 #include <iostream>
 class Frac
