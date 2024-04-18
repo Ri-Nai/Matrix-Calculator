@@ -41,6 +41,10 @@ Matrix_Calculator
 - **基本功能**
 ![](/img/basic.png)
   - **输入矩阵**
+    - 可以以小数分数和整数的形式输入
+    - ![](/img/Input_sample.png)
+    - 最终以分数`Frac`类的形式显示
+    - ![](/img/Output_sample.png)
   - **查看矩阵**
   - **矩阵表达式求值**
     - 加,减,乘,次方

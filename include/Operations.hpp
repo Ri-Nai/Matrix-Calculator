@@ -38,7 +38,7 @@ std::string In_or_out()
     }
     return name;
 }
-//提问并收取回答的函数
+// 提问并收取回答的函数
 bool Yes_yeah_Oh_no(std::string question)
 {
     Color_out(green, question + "(Y/n)");
@@ -51,7 +51,7 @@ bool Yes_yeah_Oh_no(std::string question)
             return false;
     }
 }
-//定义了一个输出初态和结果的函数
+// 定义了一个输出初态和结果的函数
 template <typename res>
 void Output_name_result(std::string name, res result)
 {
@@ -60,7 +60,7 @@ void Output_name_result(std::string name, res result)
               << "The result of " << name << " is:" << std::endl
               << result << std::endl;
 }
-//定义了一个视情况存储结果的函数
+// 定义了一个视情况存储结果的函数
 void Save_Matrix(Matrix result)
 {
     if (result.empty())
@@ -74,7 +74,7 @@ void Save_Matrix(Matrix result)
 }
 void Input_Matrix()
 {
-    Menu("输入矩阵", {"请先输入矩阵的名称(符合C/C++变量命名标准的)", "再输入矩阵的实际值", "矩阵的名字处输入exit可以退出该模块"}).Show();
+    Menu("输入矩阵", {"请先输入矩阵的名称(符合C/C++变量命名标准的)", "再输入矩阵的实际值", "可以以小数/分数/整数的形式输入,最后解析成分数", "矩阵的名字处输入exit可以退出该模块"}).Show();
     while (true)
     {
         Color_out(yellow, "输入矩阵的名字(当输入exit时退出该模块)");
