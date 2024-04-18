@@ -69,6 +69,7 @@ Matrix_Calculator
 编译源文件的方式(保证已经安装并配置CMake环境)
 在命令行中输入以下内容
 ```
+mkdir build
 cd .\build\
 cmake ..
 cmake --build .
