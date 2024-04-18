@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <functional>
 
-//定义菜单类,函数和子标题绑定
+// 定义菜单类,函数和子标题绑定
 class Menu
 {
 private:

@@ -67,7 +67,7 @@ Matrix Matrix::operator*(const Frac &scalar) const
             result.Set_Element(row, col, data[row][col] * scalar);
     return result;
 }
-//定义了一个连接运算符
+// 定义了一个连接运算符
 Matrix Matrix::operator|(const Matrix &other) const
 {
     if (other.rows != rows)
@@ -81,7 +81,7 @@ Matrix Matrix::operator|(const Matrix &other) const
         result.data[row].insert(result.data[row].end(), other.data[row].cbegin(), other.data[row].cend());
     return result;
 }
-//定义了一个次方运算符
+// 定义了一个次方运算符
 Matrix Matrix::operator^(const int &pow) const
 {
     Matrix result(0, 0), base = *this;

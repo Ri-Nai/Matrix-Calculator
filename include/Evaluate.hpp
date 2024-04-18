@@ -157,7 +157,7 @@ Matrix Evaluate(const std::string &str)
                 while (i < s.size() && check_name(s[i], false))
                     name += s[i++];
                 --i;
-                if(Matset.count(name) == 0)
+                if (Matset.count(name) == 0)
                 {
                     Warning();
                     return Matrix();

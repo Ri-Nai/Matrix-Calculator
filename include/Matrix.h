@@ -30,7 +30,7 @@ public:
     Frac Get_Element(int row, int col) const;
     void Set_Element(int row, int col, const Frac &value);
     bool empty() const;
-    int Get_Rank()const;
+    int Get_Rank() const;
     Matrix operator+(const Matrix &other) const;
     Matrix operator-(const Matrix &other) const;
     Matrix operator*(const Frac &scalar) const;

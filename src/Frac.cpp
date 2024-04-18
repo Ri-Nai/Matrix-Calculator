@@ -112,8 +112,8 @@ Frac abs(const Frac &frac)
         return Frac(-frac.Get_Numerator(), -frac.Get_Denominator());
     return frac;
 }
-//使分数比较格式化地输出
-//由于难以调教std::format,自己写了一个很丑陋的
+// 使分数比较格式化地输出
+// 由于难以调教std::format,自己写了一个很丑陋的
 std::string Frac::Format_Output(const int &place) const
 {
     std::stringstream ss;
@@ -122,7 +122,7 @@ std::string Frac::Format_Output(const int &place) const
     ss >> result;
     int length = result.size();
     if (length >= place)
-        return " "+result+" ";
+        return " " + result + " ";
     int rest = place - length;
     int middle = rest / 2;
     result = std::string(middle, ' ') + result + std::string(rest - middle, ' ');

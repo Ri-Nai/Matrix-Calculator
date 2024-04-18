@@ -38,7 +38,7 @@ Matrix Matrix::Inverse(bool process) const
         Color_out(red, "看起来你的矩阵不满秩哦");
         return Matrix();
     }
-    //利用高斯消元的方式求逆矩阵
+    // 利用高斯消元的方式求逆矩阵
     auto [rank, result] = (*this | Identity(cols)).Guass_Elimination(process);
     return result.Sub_Matrix(0, cols, rows, rows + cols);
 }
@@ -112,7 +112,7 @@ std::pair<int, Matrix> Matrix::Guass_Elimination(bool process, bool show_result)
         if (process)
             std::cout << result << std::endl;
     }
-    if(show_result)
+    if (show_result)
     {
         std::cout << "rank = " << rank << std::endl;
         std::cout << "The result is:" << std::endl;
