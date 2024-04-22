@@ -65,18 +65,23 @@ Matrix_Calculator
   - 配备了部分错误情况输出提醒
 ## 自测运行环境
 ### 环境
-- **操作系统**：Windows 11
-- **语言标准**：C++20
-- **编译器版本**：g++ 13.2.0
-- **其他配置**：CMake相关配置
+- **操作系统**: Windows 11 专业版
+- **编译环境**:
+  - **语言标准**: C++20
+  - `g++: 13.2.0`
+  - `cmake: 3.29.2`
+  - `ninja: 1.11.1`
 ### 启动！方式
-编译源文件的方式(保证已经安装并配置CMake环境)
+
+1. 编译源文件的方式(保证已经安装并配置CMake环境)\
 在命令行中输入以下内容
 ```
-mkdir build
+mkdir build (如果不存在build文件夹)
 cd .\build\
 cmake ..
 cmake --build .
 ```
-之后会在`.\build\`下生成一个`Matrix_Calculator.exe`可执行文件
+之后会在`.\build\`下生成一个`Matrix-Calculator.exe`可执行文件
 
+2. 直接运行Compile.ps1 \
+之后也会在`.\build\`下生成一个`Matrix-Calculator.exe`
