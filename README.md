@@ -1,4 +1,7 @@
 # 矩阵计算器 | Matrix_Calculator
+参加 [北理十行代码挑战赛](https://mp.weixin.qq.com/s?__biz=MjM5NjE3NjI1Mw==&mid=2651374572&idx=1&sn=e7f74ce9e27a8346913d4334b44434de) 的简单作品。
+
+实现了基本的界面, 矩阵的定义与使用，包含矩阵的表达式计算.
 ![](/img/head.png)
 ## 代码简介
 ### 文件结构
